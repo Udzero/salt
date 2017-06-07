@@ -1,0 +1,32 @@
+<html>
+
+    <head>
+        <title>{{ title | default("Hi there!, are you well?") }}</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/css/foundation.min.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+
+    </head>
+    
+    <body>
+        <div class="row">
+          <div class="large-12 columns">
+            <h1>Welcome to Foundation: {{name}}</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-12 columns">
+
+            <a href="/">Go Back Home</a> This is your greeting "{{ message }}"
+
+            <hr />
+            The time is: {{ time_str }}
+
+          </div>
+        </div>
+
+        <script src="/static/js/foundation.min.js" ></script>
+        <script src="/static/js/app.js" ></script>
+    </body>
+</html>

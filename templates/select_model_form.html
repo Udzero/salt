@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form method="POST" action="pick-model">
+
+{% for i in range(1, num+1) %}
+ 
+<div class="row">
+ <div class="col-sm-12">
+     <h4>Company {{i}}</h4>
+  <div class="form-group">
+    <label for="companyname">Company Name:</label>
+    <input type="companyname" name="companyname_{{i}}" class="form-control" id="companyname">
+  </div>
+  <div class="form-group">
+    <label for="income">Income:</label>
+    <input type="income" class="form-control" name="income_{{i}}" id="income">
+  </div>
+  <div class="form-group">
+    <label for="shareprice">Share Price:</label>
+    <input type="shareprice" class="form-control" name="shareprice_{{i}}" id="shareprice">
+  </div>
+  <div class="checkbox">
+    <label for="totalassets">Total Assets:</label>
+    <input type="totalassets" class="form-control" name="totalassets_{{i}}" id="totalassets">
+  </div>
+ </div>
+ </div>
+ 
+ <hr class="fullwidth" />
+ 
+ {% endfor %}
+ 
+ <div class="actions">
+       <button type="submit" class="btn btn-default">Submit</button>
+ </class>
+ 
+ 
+</form>
+
+{% endblock %}

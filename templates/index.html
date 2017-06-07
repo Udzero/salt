@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Welcome to Great Stock Model</h1>
+
+<div>
+<p class="well">
+    This is a simple application for a stock selection model.
+</p>
+
+
+    <form action="/pick-model">
+        <div class="row">    
+            <div class="form-group col-sm-4">
+                <label for="cnt">Companies Count:</label>
+                <select name="cnt" class="selectpicker" >
+                    {% for i in range(2,11) %}
+                    <option value="{{i}}" {% if 2 == i %} selected="selected" {% endif %} >Enter <b>{{i}}</b> Companies</option>
+                    {% endfor %}
+                </select>
+            </div>    
+        </div>
+        <div class="row">    
+            <div class="actions col-sm-4">
+                <input type="submit" value="Proceed >>" class="btn btn-primary btn-lg" />
+            </div>
+        </div>
+        
+    </form>
+</div>
+
+</div>
+
+{% endblock %}

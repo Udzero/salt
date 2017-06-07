@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Great Stock Model - Results</h1>
+
+<div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Company</th><th>Income</th><th>Share Price</th><th>Total Assets</th><th>Average</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+    {% for result in results %}
+        <tr>
+            <td>{{ result.companyname }}</td>
+            <td>{{ result.income }}</td>
+            <td>{{ result.shareprice }}</td>
+            <td>{{ result.totalassets }}</td>
+            <td>{{ result.avg }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+
+
+</div>
+
+{% endblock %}
